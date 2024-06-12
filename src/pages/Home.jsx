@@ -1,5 +1,5 @@
 // import React from 'react'
-import InputStyle from "../compoenent/InputStyle";
+import InputStyle from "../components/InputStyle";
 
 const Home = () => {
   return (

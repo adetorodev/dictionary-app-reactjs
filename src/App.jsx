@@ -1,10 +1,12 @@
 // import {Button} from "@nextui-org/button";
-import Home from "./pages/Home";
+import Definition from "./pages/Definition";
+// import Home from "./pages/Home";
 
 function App() {
   return (
     <>
-      <Home />
+      {/* <Home /> */}
+      <Definition />
     </>
   );
 }

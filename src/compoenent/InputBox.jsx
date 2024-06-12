@@ -1,12 +1,19 @@
 // import React from 'react'
 
-import { Input } from "@nextui-org/input"
-import { SearchIcon } from "./SearchIcon"
+import { Input } from "@nextui-org/input";
+import { SearchIcon } from "./SearchIcon";
+// import { Button } from "@nextui-org/react";
+import { useState } from "react";
 
 export const InputBox = () => {
+  const [word, setWord] = useState("");
   return (
-    <>
-        <Input
+    <form onSubmit={(e) => {
+      // console.log(e.target.value)
+      setWord(e.target.value)
+    }}
+    >
+      <Input
         label="Search"
         isClearable
         radius="lg"
@@ -36,7 +43,7 @@ export const InputBox = () => {
           <SearchIcon className="text-black/50 mb-0.5 dark:text-white/90 text-slate-400 pointer-events-none flex-shrink-0" />
         }
       />
-    </>
-  )
-}
-
+      <button type="button" className="text-gray-900 bg-gradient-to-r from-teal-200 to-lime-200 hover:bg-gradient-to-l hover:from-teal-200 hover:to-lime-200 focus:ring-4 focus:outline-none focus:ring-lime-200 dark:focus:ring-teal-700 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2">Search</button>
+    </form>
+  );
+};
